@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Picture Scrutiny</title>
+</head>
+<body>
+    <h1>Scrutinise an Image</h1>
+    <h3>Welcome to Picture Scrutiny™</h3>
+    <p>On this site, upload an image of someone in a suit with what you score them!</p>
+    <p>Legal Disclaimer: Please do not use this site for any covert communications >:(</p>
+    <form method="post" enctype="multipart/form-data">
+        <label for="image">Upload an Image:</label>
+        <input type="file" id="image" name="image"><br><br>
+
+        <label for="text">Description:</label>
+        <input type="text" id="text" name="text"><br><br>
+
+        <label for="int1">Hair (between 1 and 256):</label>
+        <input type="number" id="int1" name="int1" min="1" max="256"><br><br>
+
+        <label for="int2">Tie (between 1 and 256):</label>
+        <input type="number" id="int2" name="int2" min="1" max="256"><br><br>
+
+        <label for="int3">Suit (between 1 and 256):</label>
+        <input type="number" id="int3" name="int3" min="1" max="256"><br><br>
+
+        <label for="int4">Misc (between 1 and 256):</label>
+        <input type="number" id="int4" name="int4" min="1" max="256"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

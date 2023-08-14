@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uploaded Entries</title>
+</head>
+<body>
+    <h1>Uploaded Entries</h1>
+    <table border="1">
+        <tr>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Scores</th>
+        </tr>
+        {% for entry in entries %}
+        <tr>
+            <td>
+                {% if entry.image %}
+                <img src="{{ url_for('static', filename='uploads/' + entry.image) }}" width="100">
+                {% else %}
+                No image
+                {% endif %}
+            </td>
+            <td>{{ entry.text }}</td>
+            <td>{{ entry.integers }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,372 @@
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Support;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
+
+#pragma warning disable
+
+namespace WebAutomation
+{
+    class Program
+    {
+        //main Selenium web driver of the program, used to find and click links 
+        static IWebDriver driver;
+        static Random random = new Random();
+        static bool paused;
+        static async Task Main(string[] args)
+        {
+            //check if server sent a pause command
+            // string receivedString = await TryConnectAndReceiveAsync("10.241.1.141", 4321, 500);
+            // Console.WriteLine("string received");
+
+            // if (receivedString != null)
+            // {
+            //     Console.WriteLine("Received string: " + receivedString);
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Connection attempt timed out after 500ms.");
+            // }
+
+            //read in list of websites, choose a random one
+            List<string> webList = new List<string>();
+            string[] lines = System.IO.File.ReadAllLines("websites.txt");
+            webList.AddRange(lines);
+
+            string randWeb = webList[random.Next(webList.Count)];
+            string url = "https://www." + randWeb;
+
+        //     if (browser == "edge")
+        // {
+            // EdgeOptions edgeOptions = new EdgeOptions();
+            // Remove "Edge is being controlled by automated software"
+            // edgeOptions.AddAdditionalEdgeOption("AddExcludedArgument", "enable-automation");
+            // driver = new EdgeDriver(edgeOptions);
+
+            //get rid of 'automated test software' flag
+            var chromeOptions = new ChromeOptions();
+            chromeOptions.AddArgument("--start-maximized");
+            chromeOptions.AddExcludedArgument("enable-automation");
+
+            //create main web driver with updated options, go to random website
+            driver = new ChromeDriver(chromeOptions);
+            driver.Navigate().GoToUrl(url);
+            //let web page load
+            Thread.Sleep(GetRandInt());
+
+            List<IWebElement> clickedLinks = new List<IWebElement>();
+            bool tabIsOpen = true;
+            //used for javascript commands to scroll and click
+            IJavaScriptExecutor executor = (IJavaScriptExecutor)driver;
+
+
+            while (tabIsOpen)
+            {
+                bool paused = ExecuteClient();
+                if (!paused){
+
+                Thread.Sleep(GetRandInt());
+                //get all web elements on current page, filter to make sure we only try the clickable ones
+                var pathLinks = driver.FindElements(By.TagName("a"));
+                List<IWebElement> visibleLinks = GetVisibleLinks(pathLinks);
+
+
+                CheckVisibleLinksSize(visibleLinks);
+
+                IWebElement pathLink = null;
+
+                //make sure we don't click on same link repeatedly
+                //check if chosen link is in clicked links, if it is then take out of visible links and pick another one until we find one that hasn't been clicked
+                while (pathLink == null || clickedLinks.Contains(pathLink))
+                {
+                    pathLink = visibleLinks[random.Next(visibleLinks.Count)];
+                    if (clickedLinks.Contains(pathLink))
+                    {
+                        visibleLinks.Remove(pathLink);
+                        CheckVisibleLinksSize(visibleLinks);
+                        pathLink = visibleLinks[random.Next(visibleLinks.Count)];
+                    }
+                    else
+                    {
+                        clickedLinks.Add(pathLink);
+                        break;
+                    }
+                }
+            
+                ScrollToElement(pathLink, executor);
+
+                Thread.Sleep(GetRandInt());
+
+                //click on the element after scrolling with the javascript executor
+                try{
+                executor.ExecuteScript("arguments[0].click();", pathLink);
+                }
+
+                //if an error is caught (stale element, clickability), close all browsers and exit the program
+                catch (Exception e){
+                Console.WriteLine(e.Message);
+                driver.Quit();
+                }
+
+                visibleLinks.Clear();
+
+                //use a random number to randomly quit the program
+                //simulates user timing of accessing pages
+                int quitNum = random.Next(0, 30);
+                if (quitNum == 0)
+                {
+                    tabIsOpen = false;
+                    Console.WriteLine("quitnum = 0");
+                    Thread.Sleep(1000);
+                    break;
+                }
+            }
+            //if server sent pause command, above code will be skipped and we check for message again
+            else {
+                Console.WriteLine("Paused...");
+                continue;
+            }
+            }
+            driver.Quit();
+        }
+
+
+        
+        //function to filter through all web links on a page, only get the ones that are clickable, visible and have size
+        static List<IWebElement> GetVisibleLinks(IList<IWebElement> pathLinks)
+        {
+            try {
+            List<IWebElement> visibleLinks = new List<IWebElement>();
+            foreach (var link in pathLinks)
+            {
+                if (link.Displayed && link.Enabled && LinkHasSize(link))
+                {
+                    visibleLinks.Add(link);
+                }
+            }
+            return visibleLinks;
+            }
+            catch(Exception e){
+                Console.WriteLine(e.Message);
+                driver.Quit();
+                return null;
+            }
+        }
+
+        static void CheckVisibleLinksSize(List<IWebElement> visibleLinks)
+        {
+            if (visibleLinks.Count == 0)
+            {
+                Thread.Sleep(3000);
+                Console.WriteLine("No Visible Links :(\n");
+                driver.Quit();
+                Environment.Exit(0);
+            }
+        }
+
+
+        //checks to make sure the chosen web element has size, need size to be clicked
+        static bool LinkHasSize(IWebElement link)
+        {
+            return link.Size.Height > 0 && link.Size.Width > 0;
+        }
+
+
+        static int GetRandInt()
+        {
+            int waitTime = random.Next(1, 3);
+            return waitTime * 1000;
+        }
+
+        static void ScrollToElement(IWebElement element, IJavaScriptExecutor executor)
+        {
+            var height = element.Size.Height;
+            var width = element.Size.Width;
+            //returns the height of the page/1.2 as the max height we can scroll to
+            var pageHeight = (int)(executor.ExecuteScript("return document.body.scrollHeight") as long? ?? 0) / (5 / 4);
+            var minHeight = pageHeight / 20; 
+            if (pageHeight <= 100)
+            {
+                minHeight = 0;
+            }
+            var randHeight = random.Next(minHeight, pageHeight);
+            var currPos = 0;
+            var scrollHeight = 1;
+
+            //while loop to scroll down page continuously until we reach the desired location based on element location
+            while (currPos <= scrollHeight)
+            {
+                //scrolling at random speed, simulate user scrolling
+                currPos += GetRandScrollSpeed();
+                //using javascript executor to scroll down the page
+                executor.ExecuteScript("window.scrollTo(0, " + currPos + ");");
+                scrollHeight = height + randHeight;
+            }
+        }
+
+
+        static int GetRandScrollSpeed()
+        {
+            return random.Next(5, 17);
+        }
+
+        //function to communicate with the conjure server
+        //uses sockets to receive pause, continue, logs, end commands
+        static bool ExecuteClient(){
+           
+        // Establish the remote endpoint
+        // for the socket. This example
+        // uses port 4321 on the local
+        // computer.
+
+        //set the argument of .Parse() to the system IP
+        //use computer IP to create the socket
+        IPAddress ipAddr = IPAddress.Parse("192.168.12.252");
+        //enter IP of the conjure server
+        IPAddress serverIPAddr = IPAddress.Parse("192.168.13.228");    
+        //the end point of the server that the socket will connect to 
+        IPEndPoint serverPoint = new IPEndPoint(serverIPAddr, 54321);    
+ 
+        //create a socket using TCP to connect local system with the server
+        Socket sender = new Socket(ipAddr.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+ 
+        try {
+             
+            
+            Console.WriteLine("Trying to Connect...");
+
+            //connect the socket binded to the local system to the server end point
+            sender.Connect(serverPoint);
+ 
+           
+            Console.WriteLine("Socket connected to -> {0} ", sender.RemoteEndPoint.ToString());
+ 
+            // Data buffer of bytes used to receive message
+            byte[] messageReceived = new byte[1024];
+            
+            //receive message from server
+            int byteRecv = sender.Receive(messageReceived);
+            //convert message from bytes to string text
+            string message = Encoding.ASCII.GetString(messageReceived, 0, byteRecv);
+            Console.WriteLine("Message from Server -> {0}", message);
+
+
+            //check the command sent from server
+            if (message == "pause"){
+                sender.Close();
+                paused = true;
+                return paused;
+            }
+            else if (message == "continue"){
+                Console.WriteLine("Continuing...");
+                sender.Close();
+                paused = false;
+                return paused;
+            }
+            else if (message == "end"){
+                Console.WriteLine("Ending Program...");
+                sender.Close();
+                driver.Quit();
+                Environment.Exit(0);
+                return paused;
+            }
+            else if (message == "logs"){
+                sendLogs(sender);
+            }
+
+
+            //close the socket to free up the port
+            //return the variable paused to maintain the current value
+            //if server sent the pause command, code should stay paused until other command is received
+            sender.Shutdown(SocketShutdown.Both);
+            sender.Close();
+            return paused;
+        }
+         
+        //Manage of Socket's Exceptions
+        catch (ArgumentNullException ane) {
+            Console.WriteLine("No Connection");
+            return paused;
+        }
+         
+        catch (SocketException se) {
+            Console.WriteLine("No Connection");
+            return paused;
+        }
+         
+        catch (Exception e) {
+            Console.WriteLine("No Connection");
+            return paused;
+        }
+    }
+
+        //send the log data to the server if requested 
+        static void sendLogs(Socket sender){
+            List<List<string>> strList = new List<List<string>>();
+            List<string> firstList = new List<string> {"hi", "alan", "cum", "piss", "shite", "BOUFFES", "Monsieur", "COCK"};
+            strList.Add(firstList);
+            List<string> secondList = new List<string> {"crackDaddy", "q", "fuck", "bloke", "lad", "ta-fucker", "DICK", "CUNT"};
+            strList.Add(secondList);
+            
+            //tell the server how many lists of logs are being sent
+            string sizeLogs = strList.Count.ToString();
+            byte[] logSizeMsg = Encoding.ASCII.GetBytes(sizeLogs);
+            int byteSent = sender.Send(logSizeMsg);
+
+
+            //iterate through each list of logs in Logs, then each member of each log, send to server
+            for (int i=0; i<strList.Count;){
+                for (int j=0; j<strList[i].Count;){
+                    byte[] logData = Encoding.ASCII.GetBytes(strList[i][j]);
+                    Console.WriteLine(Encoding.UTF8.GetString(logData));
+                    int logRet = sender.Send(logData);
+                    
+
+                    //server will send "next" command when log item is sent
+                    byte[] nextMsg = new byte[1024];
+                    int nextMsgBytes = sender.Receive(nextMsg);
+                    string nextStr = Encoding.ASCII.GetString(nextMsg, 0, nextMsgBytes);
+                
+                    //we then receive the next command and increment the index to send the next item in the log data list
+                    if (nextStr == "next"){
+                        j+=1;
+                    }
+                    
+                }
+   
+                Console.WriteLine("list of strings sent");
+                //receive ack message from server to know server saved list of logs properly
+                byte[] messageReceived = new byte[1024];
+                int byteRecv = sender.Receive(messageReceived);
+                string ack = Encoding.ASCII.GetString(messageReceived, 0, byteRecv);
+                
+                //when we get the ack message, increment the index of lists to get the next log list
+                if (ack=="ack"){
+                    Console.WriteLine("Log List Accepted");
+                    i+=1;
+                }
+                else{
+                    continue;
+                }
+            }
+
+            //tell server we are done sending log data
+            byte[] msg = Encoding.ASCII.GetBytes("done");
+            int doneMsg = sender.Send(msg);
+            Console.WriteLine("Sent Done Message");
+        }
+    }
+}
+#pragma warning restore
+
+
+
+    

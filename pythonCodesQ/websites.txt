@@ -1,0 +1,11 @@
+bing.com
+google.com
+facebook.com
+youtube.com
+yahoo.com
+ebay.com
+amazon.com
+dell.com
+ua.edu
+wikipedia.com
+python.org

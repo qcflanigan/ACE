@@ -1,0 +1,2 @@
+You are in Zone 1. Replace the X in IP Addresses found in Target-Network-Info.txt with this Zone Number
+Your attacker IP is 3.81.36.91 Login with user[1-4] with password FutureLeader2023

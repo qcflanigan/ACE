@@ -1,0 +1,11 @@
+conjure-1:
+  ip: 10.65.181.206
+  port: 22
+  user: futureleaders
+  pass: Conjure2023!
+conjure-2:
+  ip: 10.65.181.223
+  port: 22
+  user: futureleaders
+  pass: Conjure2023!
+
